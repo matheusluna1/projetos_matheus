@@ -1,0 +1,65 @@
+body{
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.containerFormulario{
+    background-color: white;
+    padding-left: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+header{
+    background-color: blueviolet;
+    padding: 1vh;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+footer{
+    background-color: blueviolet;
+    text-align: center;       
+    width: 97.9vw;
+    padding: 1vh;
+}
+#btCadastrar{
+    background-color: blueviolet;
+    border: solid 1px black;
+    padding: 1vh;
+}
+.mensagemDeErro{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+input{
+    width: 20vw;
+    height: 3vh;
+}
+select{
+    height: 4vh;
+}
+#nome, #idade, #selecaoSexo, #peso, #altura, #nivelDeAtividade, #perderPeso, #diasPerder, #distancia{
+    border: solid 1px gray;
+}
+.resultados{
+    background-color: blueviolet;
+    text-align: center;
+    margin-top: 0;
+    padding: 3vh;
+    margin-bottom: 1vh;
+}
+.semInput, .comInput{
+    background-color: white;
+    padding: 1vh;
+    padding-left: 5vw;
+}
+.containerResultados{
+    margin-top: 0px;
+}
+#resultadoDistancia, #resultadoDiasPerder {
+    display: none;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Sistema de Cálculo de Avaliação Física</h2>
+    </header>
+    <section class="containerFormulario">
+        <form class="formulario">
+            <section>
+                <label for="nome">Digite seu nome</label>
+                <input type="text" id="nome">
+                <div id="nomeErro" class="mensagemDeErro">Informe seu nome</div><br><br>
+            </section>
+            <section>
+                <label for="idade">Digite sua idade</label>
+                <input type="number" id="idade">
+                <div id="idadeErro" class="mensagemDeErro">Informe sua idade</div><br><br>
+            </section>
+            <section>
+                <label for="sexo">Selecione seu sexo</label>
+                <select name="selecaoDeSexo" id="selecaoSexo">
+                    <option value="naoValidaSexo">Selecione seu sexo</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+                <div id="sexoErro" class="mensagemDeErro">Escolha um sexo</div><br><br>
+            </section>
+            <section>
+                <label for="peso">Digite seu peso em KG</label>
+                <input type="number" id="peso">
+                <div id="pesoErro" class="mensagemDeErro">Insira seu peso</div><br><br>
+            </section>
+            <section>
+                <label for="altura">Digite sua altura em centímetros</label>
+                <input type="number" id="altura">
+                <div id="alturaErro" class="mensagemDeErro">Insira sua altura (em centímetros)</div><br><br>
+            </section>
+            <section>
+                <label for="nivelDeAtividade">Selecione seu nível de atividade física</label>
+                <select name="selecaoNivelAtividade" id="nivelAtividade">
+                    <option value="naoValidaAtividade">Selecione seu nível de atividade física</option>
+                    <option value="sedentario">1- Sedentário: Pouco ou nenhum exercício</option>
+                    <option value="leve">2- Leve: Exercício leve 1-3 dias por semana</option>
+                    <option value="moderado">3- Moderado: Exercício moderado 3-5 dias por semana</option>
+                    <option value="muitoAtivo">4- Muito ativo: Exercício difícil 6-7 dias por semana</option>
+                    <option value="extremamenteAtivo">5- Extremamente ativo: Exercício diário muito difícil e trabalho
+                        físico 2x ao dia</option>
+                </select>
+                <div id="nivelDeAtividadeErro" class="mensagemDeErro">Escolha seu nível de atividade física</div>
+                <br><br>
+            </section>
+            <section>
+                <button id="btCadastrar" onclick="cadastro(event)">Cadastrar</button>
+            </section>
+        </form>
+    </section>
+    <section class="contas">
+        <h2 class="resultados">Resultados</h2>
+        <section class="containerResultados">
+            <section class="semInput">
+                <p id="taxaMetabolica"></p>
+                <p id="gastoCalorico"></p>
+                <p id="quantidadeAgua"></p>
+            </section>
+            <section class="comInput">
+                <h3>Déficit calórico para perder X Kg em Y dias</h3>
+                <label for="perderPeso">Insira o peso em Kg que deseja perder</label>
+                <input type="number" id="perderPeso">
+                <p id="perderPesoErro" class="mensagemDeErro">Insira o peso que deseja perder para o cálculo</p><br><br>
+                <label for="diasPerder">Insira a quantidade de dias para perder peso</label>
+                <input type="number" id="diasPerder">
+                <p id="diasPerderErro" class="mensagemDeErro">Insira uma quantidade de dias para o cálculo</p>
+                <p id="resultadoDiasPerder"></p><br><br>
+                <button id="btCadastrar" onclick="calcularDeficit()">Calcular</button><br><br>
+                <h3>Gasto calórico ao realizar uma caminhada de distância X</h3>
+                <label for="distancia">Insira a distância em Km percorrida</label>
+                <input type="number" id="distancia">
+                <p id="distanciaErro" class="mensagemDeErro">Insira a distância percorrida em Km e certifique-se que seu peso está cadastrado</p>
+                <div id="pesoErro" class="mensagemDeErro">Insira seu peso</div><br><br>
+                <p id="resultadoDistancia">resultado distancia</p><br><br>
+                <button id="btCadastrar" onclick="calcularDistancia()">Calcular</button><br><br>
+            </section>
+        </section>
+    </section>
+    <footer>
+        <p>Esse sistema de cálculo permite análises mais eficientes e personalizadas</p>
+    </footer>
+</body>
+
+</html>
