@@ -1,7 +1,8 @@
 # Sistema de Cálculo de Avaliação Física
 Esse repositório armazena meu projeto web de cálculo de avaliação física, com várias funções, cálculos, validações inteligentes e processamento de dados em tempo real. 
 
-Descrição: 
+Descrição:
+
 🚀 Novo projeto!
 
 Acabo de concluir um sistema web para cálculo de avaliação física, desenvolvido utilizando HTML, CSS e JavaScript, com foco na otimização da usabilidade e na precisão dos resultados.
