@@ -1,0 +1,153 @@
+/* === Estilos Originais (Desktop) === */
+body{
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Previne rolagem horizontal */
+}
+
+.containerFormulario{
+    background-color: white;
+    padding-left: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+header{
+    background-color: blueviolet;
+    padding: 1vh;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+footer{
+    background-color: blueviolet;
+    text-align: center;
+    width: 100%; /* Correção da rolagem horizontal */
+    padding: 1vh;
+    margin-top: 1vh; /* Adicionado para garantir espaço antes do footer */
+}
+
+#btCadastrar{
+    background-color: blueviolet;
+    border: solid 1px black;
+    padding: 1vh;
+    color: white; /* Melhorar contraste */
+    cursor: pointer;
+}
+
+.mensagemDeErro{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+input{
+    width: 20vw;
+    height: 3vh;
+    /* Resetando padding para o padrão do navegador ou ajuste fino se necessário */
+    padding: 2px 5px;
+    margin-bottom: 0; /* Revertendo espaçamento extra */
+}
+
+select{
+    height: 4vh;
+    width: auto; /* Permitir que o select ajuste sua largura */
+    padding: 2px 5px;
+    margin-bottom: 0;
+}
+
+/* Aplicando borda a todos os inputs e selects relevantes */
+input[type="text"], input[type="number"], select {
+    border: solid 1px gray;
+}
+
+label {
+    /* Mantendo o estilo original inline-block implícito */
+    margin-right: 10px; /* Adicionar espaço entre label e input */
+}
+
+.resultados{
+    background-color: blueviolet;
+    text-align: center;
+    margin-top: 0;
+    padding: 3vh;
+    margin-bottom: 1vh;
+}
+
+.semInput, .comInput{
+    background-color: white;
+    padding: 1vh;
+    padding-left: 5vw;
+}
+
+.containerResultados{
+    margin-top: 0px;
+}
+
+#resultadoDistancia, #resultadoDiasPerder {
+    display: none;
+}
+
+#contas {
+    display: none;
+}
+
+/* Separador visual <br> */
+br {
+    margin-bottom: 1.5vh; /* Ajustar espaçamento vertical original */
+}
+
+/* === Responsividade (Telas Pequenas) === */
+@media (max-width: 767px) {
+    * {
+        box-sizing: border-box; /* Essencial para responsividade com padding/border */
+    }
+
+    .containerFormulario, .semInput, .comInput {
+        padding-left: 15px; /* Padding fixo para telas pequenas */
+        padding-right: 15px;
+    }
+
+    input, select {
+        width: 100%; /* Ocupa toda a largura disponível */
+        height: auto; /* Altura automática */
+        padding: 10px; /* Padding maior para toque */
+        margin-bottom: 15px; /* Espaçamento inferior */
+        font-size: 1rem; /* Tamanho de fonte legível */
+    }
+
+    label {
+        display: block; /* Labels acima dos inputs */
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    #btCadastrar {
+        width: 100%; /* Botão ocupa largura total */
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    /* Ajustar botões dentro da seção de resultados também */
+    .comInput button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1rem;
+        margin-top: 10px; /* Espaço acima dos botões de cálculo */
+    }
+
+    br {
+        display: none; /* Ocultar <br>s extras, o margin-bottom nos inputs cuida do espaço */
+    }
+
+    /* Garantir que as seções do formulário não tenham espaçamento estranho */
+    .containerFormulario section {
+        margin-bottom: 10px;
+    }
+}
+
